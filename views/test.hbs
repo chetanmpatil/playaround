@@ -1,0 +1,62 @@
+<h1 style="margin-left:230px">{{title}}</h1>
+<h2>{{disphead}}</h2>
+<div id="formField">
+<form method="post" action='/index/submit'>
+<table>
+ <tbody>
+  <tr>
+  <td>
+  Number: 
+  </td>
+  <td>
+  <input type="text" name="id" value={{identity}}>
+  </td>
+ </tr>
+ <tr>
+  <td>
+  Name:
+  </td>
+  <td>
+  <input type="text" placeholder="Enter name" name="username" id="nameField">
+  </td>
+  </tr>
+  <tr>
+  <td>
+  EmailID:
+  </td>
+  <td>
+  <input type="text" name="email" placeholder="Enter email" id="emailField">
+  </td>
+  </tr>
+  <tr>
+  <td>
+  Psssword:
+  </td>
+  <td>
+  <input type="password" name="password" id="passwordField">
+  </br></br>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <input type="submit" value="send"></br>
+  <p>the id is: {{identity}}</p>
+  </br></br>
+  <p>Display Data<a href="/get-data ">Go</a></p>
+</form>
+</div>
+
+<div style="position:absolute; margin-left:650px;width:200px;height:400px; overflow:scroll">
+ <h2>{{head}}</h2>
+    {{# each res}}
+<article>
+  <div>id: {{this.id}}</div>
+  <div>Name: {{this.name}}</div>
+  <div>Email Id: {{this.email}}</div>
+  <div>Password: {{this.pass}}</div>
+ </article> 
+ }
+ {{/each}}
+</div>
+  
+
